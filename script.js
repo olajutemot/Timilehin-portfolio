@@ -39,6 +39,7 @@ skillButton.addEventListener("click", () => {
     // ======================setting responsiveness=====================
     if (window.innerWidth > 768) {
       skill.style.display = "flex";
+      skill.style.flexDirection = "row";
       project.style.display = "none";
     } else {
       skill.style.display = "flex";
