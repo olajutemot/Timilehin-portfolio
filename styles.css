@@ -160,7 +160,7 @@ button:hover {
 }
 .fa-moon,
 .fa-sun {
-  position: absolute;
+  position: fixed;
   top: 5%;
   left: 90%;
 }
