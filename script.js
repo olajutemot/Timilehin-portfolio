@@ -36,8 +36,15 @@ skillButton.addEventListener("click", () => {
   if (projectButton.classList.contains("project-toggle-active")) {
     projectButton.classList.remove("project-toggle-active");
     skillButton.classList.add("project-toggle-active");
-    skill.style.display = "contents";
-    project.style.display = "none";
+    // ======================setting responsiveness=====================
+    if (window.innerWidth > 768) {
+      skill.style.display = "flex";
+      project.style.display = "none";
+    } else {
+      skill.style.display = "flex";
+      skill.style.flexDirection = "column";
+      project.style.display = "none";
+    }
   } else {
     skillButton.classList.add("project-toggle-active");
   }
@@ -48,7 +55,12 @@ projectButton.addEventListener("click", () => {
   } else {
     skillButton.classList.remove("project-toggle-active");
     projectButton.classList.add("project-toggle-active");
-    skill.style.display = "none";
-    project.style.display = "contents";
+    if (window.innerWidth >= 768) {
+      skill.style.display = "none";
+      project.style.display = "grid";
+    } else {
+      skill.style.display = "none";
+      project.style.display = "contents";
+    }
   }
 });

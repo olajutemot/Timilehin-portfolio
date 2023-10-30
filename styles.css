@@ -151,7 +151,7 @@ button:hover {
   --icon-background-hover-color2: #b7b7ba;
 }
 .darkmode {
-  --background-color: #0e0e0e;
+  --background-color: #282727;
   --color: #f7f7ff;
   --icon-background-color: rgb(57, 57, 57);
   --icon-background-hover-color: #070707;
@@ -329,7 +329,8 @@ button:hover {
 .frontend,
 .backend {
   display: grid;
-  row-gap: 20px;
+  column-gap: 20px;
+  margin: 0 auto;
 }
 .Skills-grid {
   margin: 1rem auto;
@@ -350,52 +351,7 @@ button:hover {
 .skill-details p {
   font-size: 0.7rem;
 }
-@media (max-width: 768px) {
-  .container {
-    background: radial-gradient(
-      farthest-side circle at 50% 24%,
-      #ccc,
-      #ccc 20%,
-      #445 21%,
-      #223 100%
-    );
-  }
-  h1 {
-    font-size: 2rem;
-    margin: 1rem 0;
-  }
-  header p {
-    font-size: 1rem;
-  }
-  .intro {
-    margin-top: 10px;
-  }
-  .portfolio-container {
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-  }
-  #info,
-  #contact-info {
-    width: 70%;
-  }
-  .filter-tabs {
-    width: 70%;
-  }
-  .grid-project-item {
-    display: contents;
-  }
-  .skills-container {
-    display: contents;
-    justify-content: flex-start;
-  }
-  .Skills-grid {
-    margin: 1rem auto;
-  }
-  .filter-sections {
-    margin: 2rem auto;
-  }
-}
+
 /* ====================================PROFILE ANIMATION========================== */
 @keyframes slidein {
   0% {
@@ -451,3 +407,51 @@ button:hover {
   }
 }
 /* =================================MEDIA QUERY=============================== */
+@media (max-width: 768px) {
+  .container {
+    background: radial-gradient(
+      farthest-side circle at 50% 24%,
+      #ccc,
+      #ccc 20%,
+      #445 21%,
+      #223 100%
+    );
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .intro {
+    margin-top: 10px;
+  }
+  .portfolio-container {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #info,
+  #contact-info {
+    width: 70%;
+  }
+  .filter-tabs {
+    width: 70%;
+  }
+  .grid-project-item {
+    display: contents;
+  }
+  .skills-container {
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    width: 75%;
+  }
+  .Skills-grid {
+    margin: 1rem auto;
+  }
+  .filter-sections {
+    margin: 2rem auto;
+  }
+}
